@@ -1,0 +1,47 @@
+<!--
+Script: TreeView Library
+Author: Zia Haider
+Created On:24th March,2022
+-->
+<html>
+    <head>
+        <title>Tree View</title>
+        <link rel="stylesheet" href="treelib.css"/>
+    </head>
+    <body>
+
+        <div class="tree-vw">
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="treelib.js"></script>
+        <script>
+            data=[
+                    {id:1,parentid:0,text:'CAPITAL',nodes:[
+                        {id:6,parentid:1,text:'SHARE CAPITAL AND RESERVES',nodes:[
+                            {id:8,parentid:1,text:'AUTHORISED CAPITAL',nodes:[
+                                {id:10,parentid:1,text:'AUTHORISED CAPITAL level 1',nodes:[
+                                    {id:11,parentid:1,text:'AUTHORISED CAPITAL level 2',nodes:[]}
+                                ]}
+                            ]},
+                            {id:9,parentid:1,text:'ISSUED,SUBSCRIBED AND PAID UP CAPITAL',nodes:[]}
+                        ]}
+                    ]},
+                    {id:2,parentid:0,text:'LIABILITIES',nodes:[]},
+                    {id:3,parentid:0,text:'ASSETS',nodes:[
+                        {id:7,parentid:1,text:'Banks',nodes:[]}
+                    ]},
+                    {id:4,parentid:0,text:'REVENUE',nodes:[]},
+                    {id:5,parentid:0,text:'EXPENSE',nodes:[]}
+                 ];
+
+            $(document).ready(function(){
+                initTreeView({
+                    'container':'.tree-vw',
+                    'data':data,
+                    'toolbar':'display'
+                });
+            });
+        </script>
+    </body>
+</html>

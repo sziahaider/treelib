@@ -1,0 +1,21 @@
+/*
+Script: TreeView Library
+Author: Zia Haider
+Created On:24th March,2022
+*/
+.tree-vw ul{
+    list-style:none;
+}
+
+.heading{
+    background:#000;
+    color:#fff;
+}
+
+.heading>ul{
+    display:none;
+}
+
+.heading>ul.open{
+    display:block;
+}
